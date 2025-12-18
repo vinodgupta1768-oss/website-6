@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NebulaCalc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<button id="themeToggle">🌙</button>
+<div class="stars"></div>
+
+<!-- HOME -->
+<div class="home" id="home">
+  <div class="home-header">
+    <h1>Nebula<span>Calc</span></h1>
+    <p>Next-Gen Basic & Scientific Calculations</p>
+
+    <div class="features">
+      <span>⚡ Fast</span>
+      <span>🧮 Smart</span>
+      <span>🌙 Dark Mode</span>
+    </div>
+  </div>
+
+  <div class="home-boxes">
+    <div class="open-box" id="openBasic">Open Basic Calculator</div>
+    <div class="open-box" id="openScientific">Open Scientific Calculator</div>
+  </div>
+</div>
+
+<!-- BASIC -->
+<div class="calculator hidden" id="basicCalc">
+  <button class="back-btn">⬅ Home</button>
+  <input id="basicDisplay" disabled>
+
+  <div class="buttons">
+    <button>7</button><button>8</button><button>9</button><button class="op">÷</button>
+    <button>4</button><button>5</button><button>6</button><button class="op">×</button>
+    <button>1</button><button>2</button><button>3</button><button class="op">−</button>
+    <button>0</button><button>.</button><button class="equal">=</button><button class="op">+</button>
+    <button class="clear">AC</button><button class="del">DEL</button>
+  </div>
+</div>
+
+<!-- SCIENTIFIC -->
+<div class="calculator sci-horizontal hidden" id="sciCalc">
+  <button class="back-btn">⬅ Home</button>
+  <input id="sciDisplay" disabled>
+
+  <div class="sci-top">
+    <button onclick="switchTab('main')">main</button>
+    <button onclick="switchTab('abc')">abc</button>
+    <button onclick="switchTab('func')">func</button>
+    <button id="modeBtn" onclick="toggleMode()">DEG</button>
+  </div>
+
+  <div class="buttons sci-tab" id="tab-main">
+    <button>1</button><button>2</button><button>3</button>
+    <button>4</button><button>5</button><button>6</button>
+    <button>7</button><button>8</button><button>9</button>
+    <button>0</button><button>.</button><button class="const-btn">π</button>
+    <button>(</button><button>)</button><button>√</button>
+    <button>÷</button><button>×</button><button>−</button><button>+</button>
+    <button class="equal">=</button>
+  </div>
+
+  <div class="buttons sci-tab hidden" id="tab-abc">
+    <button>a</button><button>b</button><button>c</button><button>d</button>
+    <button>e</button><button>f</button><button>g</button><button>h</button>
+    <button>i</button><button>j</button><button>k</button><button>l</button>
+  </div>
+
+  <div class="buttons sci-tab hidden" id="tab-func">
+    <button class="func-btn">sin</button><button class="func-btn">cos</button>
+    <button class="func-btn">tan</button><button>log</button>
+    <button>ln</button><button class="power-btn">x²</button>
+    <button class="power-btn">x³</button><button class="power-btn">^</button>
+    <button>!</button><button>abs</button>
+    <button class="danger-btn">AC</button><button class="danger-btn">DEL</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Created by <span class="author-name">Aryan Gupta</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
